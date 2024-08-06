@@ -1,0 +1,39 @@
+<main>
+
+    <nav-header class="position-fixed" [ngClass]="{ 'hide-navbar': hideMenu }" />
+
+    <section>
+        <router-outlet/>
+    </section>
+
+    <app-footer/>
+
+</main>
+
+@if (translateService.GetLang === 'es') {
+    <a  class="btn--whatsapp" 
+        target="_blank"
+        [href]="
+            'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+            'Me gustaría recibir información sobre los servicios que brindan.'"
+        >
+        <img [src]="'../../assets/theme/'+localStorageService.GetMode+'/icon/icon-whatsapp.svg'" 
+            alt="WhatsApp Icon" 
+            width="50" 
+            height="50"
+        >
+    </a>
+} @else {
+    <a  class="btn--whatsapp" 
+        target="_blank"
+        [href]="
+            'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+            'I would like information about the services you provide.'"
+        >
+        <img [src]="'../../assets/theme/'+localStorageService.GetMode+'/icon/icon-whatsapp.svg'" 
+            alt="WhatsApp Icon" 
+            width="50" 
+            height="50"
+        >
+    </a>
+}

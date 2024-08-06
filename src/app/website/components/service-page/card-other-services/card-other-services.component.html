@@ -1,0 +1,32 @@
+<div class="container">
+    @for (service of this.services; track $index; let i = $index;) {
+        <div class="card item-{{i}}" 
+            [routerLink]="service?.router">
+            @if (service?.promotion) {
+                <p class="
+                    font__size--b2
+                    font__color--tertiary
+                    font__weight--medium
+                    promotion
+                    "
+                    [ngClass]="{
+                        'best-seller': service?.promotion === 'services.promo.best-seller',
+                        'new': service?.promotion === 'services.promo.new',
+                        'sale': service?.promotion === 'services.promo.sale'
+                    }">
+                    {{ service?.promotion | translate:translateService.GetLang }}
+                </p>
+            }
+    
+            <img [src]="'../../../../../assets/theme/'+localStorageService.GetMode+'/img/image_edited.webp'"
+                alt=""
+            >
+    
+            <p class="
+                font__weight--medium
+                ">
+                {{ service.title | translate:translateService.GetLang }}
+            </p>
+        </div>
+    }
+</div>

@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+
+    .block__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .block__services {
+        background-color: var(--fd-color-bg-secondary);
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .block__clients {
+        background: var(--fd-color-brand-secondary);
+    }
+
+
+}

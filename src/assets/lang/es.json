@@ -1,0 +1,116 @@
+{
+    "lang":{
+        "selected":"Español",
+        "es":"Español",
+        "en":"Inglés"
+    },
+    "button":{
+        "contact":"Contacto",
+        "services":"Servicios",
+        "about-service":"Acerca del servicio",
+        "info":"Solicitar información",
+        "back":"Volver a la página de servicios"
+    },
+    "menu":{
+        "home":"Inicio",
+        "about":"Nosotros",
+        "services":"Servicios",
+        "contact":"Contacto",
+        "nav":"Navegación",
+        "settings":"Ajustes"
+    },
+    "footer":{
+        "titles":{
+            "contact":"Contacto",
+            "menu":"Menú"
+        },
+        "subtitles":{
+            "social-media":"Redes Sociales"
+        }
+    },
+    "home":{
+        "title":"Servicio de limpieza profesional",
+        "description":"Nuestro servicio de limpieza profesional está diseñado para satisfacer todas sus necesidades de higiene y mantenimiento, tanto en entornos residenciales como comerciales. Con un equipo altamente capacitado y el uso de productos de limpieza de alta calidad, garantizamos resultados impecables y duraderos.",
+        "services":{
+            "title":"Servicios de limpieza por contrato",
+            "description":"Las actividades planificadas se llevarán a cabo conforme al siguiente esquema de operación, asegurando la correcta ejecución y cumplimiento de cada tarea establecida:",
+            "list-title":"Cumplimiento de las actividades acordadas:"
+
+        }
+
+    },
+    "services": {
+        "title":"Nuestros Servicios",
+        "promo":{
+            "best-seller":"Más Vendido",
+            "new":"Nuevo Servicio",
+            "sale":"En promoción"
+        },
+        "service-1": {
+            "title":"Limpieza Oficina",
+            "description":"Contamos con un servicio de limpieza integral para ambientes cerrados de trabajo."
+        },
+        "service-2": {
+            "title":"Limpieza de Comedor",
+            "description":"Ofrecemos servicio de limpieza general en áreas de comedor ideal para una buena presentación."
+        },
+        "service-3": {
+            "title":"Limpieza en Alturas",
+            "description":"Contamos con personal especializado para la ejecución de la limpieza de dichas superficies tanto interiores como exteriores, ofrecemos personal con el equipo de seguridad y experiencia profesional."
+        },
+        "service-4": {
+            "title":"Limpieza de Salas",
+            "description":"La limpieza de sillas está enfocada en la eliminación absoluta de ácaros del polvo, además de recuperar el color y belleza de tu sillón, cosa que por lo métodos de vanguardia que utilizamos, somos capaces de lograr desde la primera visita."
+        },
+        "service-5": {
+            "title":"Limpieza de Alfombras",
+            "description":"Nuestro servicio ayuda a levantar el polvo y las manchas a la superficie lo que facilita la remoción de la suciedad mediante nuestra técnica de inyección–succión."
+        },
+        "service-6": {
+            "title":"Jardinería",
+            "description":"El mantenimiento de jardínes, patios o cubiertas vegetales es necesario para disfrutar su aspecto. Ponemos a su disposición nuestro servicio para garantizar el buen estado y seguridad."
+        },
+        "service-7": {
+            "title":"Sanitizaciones",
+            "description":"Combatimos al 99.99% de gérmenes mediante la nanotecnología. Dicho proceso asegura la desinfección del aire y las superficies de muebles, paredes y objetos."
+        },
+        "service-8": {
+            "title":"Venta de productos",
+            "description":"Empleamos siempre los productos de mejor calidad del mercado y de menor impacto ambiental, adaptados a las necesidades de cada cliente."
+        },
+        "activities": {
+            "li1":"Jornada diaria de 8 hrs",
+            "li2":"Personal uniformado e identificado con gafete",
+            "li3":"Rutina de trabajo por persona",
+            "li4":"Artículos y productos de limpieza",
+            "li5":"Supervisión de personal",
+            "li6":"Capacitación continua",
+            "li7":"Respuesta inmediata a cobertura de faltas"
+        }
+    },
+    "clients":{
+        "title":"Nuestros Clientes"
+    },
+    "other-services": {
+        "title":"Otros Servicios"
+    },
+    "about":{
+        "title":"¿Quiénes somos?",
+        "description":" En Dista Clean, nos dedicamos apasionadamente a proporcionar servicios de limpieza excepcionales para satisfacer las necesidades de nuestros clientes con integridad, profesionalismo y eficiencia. Nos esforzamos por ofrecer soluciones de primera calidad adaptadas a cada cliente, asegurando un entorno impecable y saludable tanto para hogares como para negocios.",
+        "vision":{
+            "title":"Visión",
+            "description":"Convertirnos en una Solución Estratégica de nuestros clientes, logrando ser la mejor opción, con una cultura solida de servicio y confianza."
+        },
+        "mission":{
+            "title":"Misión",
+            "description":"Lograr hacer de Dista Clean el mejor Socio de Negocios, que brinde servicios y soluciones de calidad con la mejor tecnología de acuerdo a las necesidades de nuestrosclientes."
+        }
+    },
+    "contact":{
+        "title":"Contactanos",
+        "description":"Bienvenido a nuestra página de contacto. Aquí, puedes ponerte en comunicación con nosotros para cualquier consulta, sugerencia o solicitud de información adicional. Nuestro equipo está disponible para ayudarte y asegurarse de que todas tus preguntas sean respondidas de manera oportuna.",
+        "email":"Correo Electronico",
+        "location":"Ubicación",
+        "number":"Número"
+    }
+}

@@ -1,0 +1,25 @@
+main {
+    display: grid;
+    grid-template-rows: auto auto;
+
+    section {
+        margin-top: calc(var(--size-nav-header) + var(--spacing-xl)) ;
+        margin-bottom: var(--spacing-lg) ;
+        /* TODO:Quitar esta linea de código */
+        /* min-height: 100vh; */
+    }
+    
+    .position-fixed {
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        transition: all .6s ease-in-out;
+    }
+
+    .hide-navbar {
+        top: -100%;
+        transition: all .6s ease-in-out;
+    }
+}

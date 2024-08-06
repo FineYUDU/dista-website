@@ -1,0 +1,94 @@
+<div class="container">
+    <div class="icon-hamburger" (click)="collapseDropdown()">
+        <div class="line line-1" 
+            [ngClass]="{'rotate-top' : isOpenDropdown}">
+        </div>
+        <div class="line line-2" 
+            [ngClass]="{'opacity-0' : isOpenDropdown}">
+        </div>
+        <div class="line line-3" 
+            [ngClass]="{'rotate-bottom' : isOpenDropdown}">
+        </div>
+    </div>
+
+    <div class="sidebar" [ngClass]="{'collapse' : !isOpenDropdown}">
+        <img 
+            [ngSrc]="'../../../../assets/theme/'+localStorageService.GetMode+'/logos/logo-color.svg'" 
+            priority="true"
+            alt="Logo"
+            width="125"
+            height="50"
+        >
+        <ul>
+            <p class="
+                font__size--h6
+                font__color--secondary
+                font__weight--bold
+                padding-bottom
+                ">
+                {{ 'menu.nav' | translate:translateService.GetLang }}
+            </p>
+            @for (menu of menusService.menuNavigation(); track $index) {
+                <li>
+                    <a class="
+                        font__size--b1
+                        font__color--secondary
+                        font__weight--regular
+                        "
+                        (click)="collapseDropdown()"
+                        [routerLink]="menu.router" 
+                        routerLinkActive="active--route" 
+                        >
+                        {{ menu.txt| translate:translateService.GetLang }}
+                    </a>
+                </li>
+            }
+        </ul>
+        <ul>
+            <p class="
+                    font__size--h6
+                    font__color--secondary
+                    font__weight--bold
+                    padding-bottom
+                ">
+                {{ 'menu.settings' | translate:translateService.GetLang }}
+            </p>
+            <li>
+                <a class="
+                    font__size--b1
+                    font__color--secondary
+                    font__weight--regular
+                    "
+                    [ngClass]="{'active--route' : translateService.GetLang === 'es'}"
+                    (click)="translateService.toggleLang('es')"
+                    >
+                    {{ 'lang.es' | translate:translateService.GetLang }}
+                </a>
+            </li>
+            <li>
+                <a class="
+                    font__size--b1
+                    font__color--secondary
+                    font__weight--regular
+                    "
+                    [ngClass]="{'active--route' : translateService.GetLang === 'en'}"
+                    (click)="translateService.toggleLang('en')"
+                    >
+                    {{ 'lang.en' | translate:translateService.GetLang }}
+                </a>
+            </li>
+
+        </ul>
+        
+        <p class="
+            font__size--b1
+            font__color--secondary
+            font__weight--regular
+            position-bottom
+        ">
+        {{ footer }}
+        </p>
+
+    </div>
+    
+</div>

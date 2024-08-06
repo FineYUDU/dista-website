@@ -1,0 +1,116 @@
+{
+    "lang":{
+        "selected":"Inglés",
+        "es":"Spanish",
+        "en":"English"
+    },
+    "button":{
+        "contact":"Contact",
+        "services":"Services",
+        "about-service":"About service",
+        "info":"Ask for information",
+        "back":"Back to services page"
+    },
+    "menu":{
+        "home":"Home",
+        "about":"About us",
+        "services":"Services",
+        "contact":"Contact",
+        "nav":"Navigation",
+        "settings":"Settings"
+    },
+    "footer":{
+        "titles":{
+            "contact":"Contact",
+            "menu":"Menu"
+        },
+        "subtitles":{
+            "social-media":"Social Media"
+        }
+    },
+    "home":{
+        "title":"Professional Clean Service",
+        "description":"Our professional cleaning service is designed to meet all your hygiene and maintenance needs, in both residential and commercial settings. With a highly trained team and the use of high quality cleaning products, we guarantee impeccable and long-lasting results",
+        "services":{
+            "title":"Contract cleaning services",
+            "description":"The planned activities will be carried out according to the following operation scheme, ensuring the correct execution and fulfillment of each established task:",
+            "list-title":"Compliance with the agreed activities:"
+        }
+    },
+    "services": {
+        "title":"Our Services",
+        "promo":{
+            "best-seller":"Best Seller",
+            "new":"New Service",
+            "sale":"On Sale"
+        },
+        "service-1": {
+            "title":"Office Cleaning",
+            "description":"We have a comprehensive cleaning service for closed work environments."
+        },
+        "service-2": {
+            "title":"Dining Room Cleaning",
+            "description":"We offer general cleaning service in dining areas ideal for a good presentation."
+        },
+        "service-3": {
+            "title":"Cleaning at Heights",
+            "description":"We have specialized personnel to carry out the cleaning of these surfaces, both interior and exterior, we offer personnel with safety equipment and professional experience."
+        },
+        "service-4": {
+            "title":"Room Cleaning",
+            "description":"Chair cleaning is focused on the absolute elimination of dust mites, in addition to recovering the color and beauty of your chair, something that due to the cutting-edge methods we use, we are able to achieve from the first visit. "
+        },
+        "service-5": {
+            "title":"Carpet Cleaning",
+            "description":"Our service helps lift dust and stains to the surface, which facilitates the removal of dirt using our injection-suction technique."
+        },
+        "service-6": {
+            "title":"Gardening",
+            "description":"The maintenance of gardens, patios or green roofs is necessary to enjoy their appearance. We put our service at your disposal to guarantee good condition and safety."
+        },
+        "service-7": {
+            "title":"Sanitations",
+            "description":"We fight 99.99% of germs through nanotechnology. This process ensures the disinfection of the air and the surfaces of furniture, walls and objects."
+        },
+        "service-8": {
+            "title":"Product sale",
+            "description":"We always use the best quality products on the market and with the lowest environmental impact, adapted to the needs of each client."
+        },
+        "activities": {
+            "li1": "8 hour daily shift",
+            "li2": "Uniformed personnel identified with a badge",
+            "li3":"Work routine per person",
+            "li4":"Cleaning items and products",
+            "li5":"Personnel supervision",
+            "li6":"Continuous training",
+            "li7":"Immediate response to foul coverage"
+        }
+    },
+    "clients":{
+        "title":"Our Clientes"
+    },
+    "other-services": {
+        "title":"Other Services"
+    },
+    "about":{
+        "title":"About us",
+        "description":"At Dista Clean, we are passionately dedicated to providing exceptional cleaning services that meet our clients' needs with integrity, professionalism, and efficiency. We strive to deliver top-notch solutions tailored to each customer, ensuring a pristine and healthy environment for homes and businesses alike.",
+        "vision":{
+            "title":"Vision",
+            "description":"To become a Strategic Solution for our clients, becoming the best option, with a solid culture of service and trust."
+        },
+        "mission":{
+            "title":"Mission",
+            "description": "To make Dista Clean the best Business Partner, providing quality services and solutions with the best technology according to the needs of our clients."
+        }
+
+    },
+    "contact":{
+        "title":"Contact Us.",
+        "description":"Welcome to our contact page. Here, you can contact us with any queries, suggestions or requests for additional information. Our team is available to help you and ensure that all your questions are answered in a timely manner. ",
+        "email":"Email",
+        "location":"Location",
+        "number":"Phone"
+    }
+
+}

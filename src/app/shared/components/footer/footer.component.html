@@ -1,0 +1,97 @@
+<div class="container">
+    <div class="body">
+        <div class="body--grid">
+            <p class="
+                    font__color--tertiary
+                    font__wight--medium
+                    font__size--h5
+                    title__align-end
+                    item-contact-title
+                ">
+                {{'footer.titles.contact' | translate:translateService.GetLang}}
+            </p>
+            <p class="
+                    font__color--tertiary
+                    font__wight--medium
+                    font__size--h5
+                    title__align-end
+                    item-menu-title
+                ">
+                {{'footer.titles.menu' | translate:translateService.GetLang}}
+            </p>
+            <img 
+                src="../../../../assets/theme/light/logos/logo-color.svg"
+                width="125"
+                height="50"
+                class="item-logo"
+                alt="my logo"
+            />
+            <div class="contact item-contact">
+                <ul>
+                    @for (menu of menusService.contactMenu(); track $index) {
+                        <li class="
+                            font__color--secondary
+                            font__wight--medium
+                            font__size--b1
+                            ">
+                            {{ menu.txt }}  
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <div class="nav-menu item-menu">
+                <ul>
+                    @for (menu of menusService.menuNavigation(); track $index) {
+                        <li>
+                            <a  [routerLink]="menu.router" 
+                                routerLinkActive="active--route" 
+                                (click)="scrollTopService.scrollToTop()"
+                                class="
+                                    font__color--secondary
+                                    font__wight--medium
+                                    font__size--b1
+                                ">
+                                {{ menu.txt | translate:translateService.GetLang }}
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+                        
+            <div class="social-media item-social-media">
+                <p class="
+                        font__color--secondary
+                        font__wight--medium
+                        font__size--b2
+                    ">
+                    {{ 'footer.subtitles.social-media' | translate:translateService.GetLang }}
+                </p>
+                <div class="icons">
+                    <a  href="https://www.instagram.com/distaclean"
+                        target="_blank"
+                        class="icon--container">
+                        <img 
+                            src="../../../../assets/theme/light/logos/logo-instagram.svg"
+                            width="25"
+                            height="25"
+                            alt="my logo"
+                        />
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="hr"></div>
+        <div class="container--footer">
+            <p class="
+                font__color--secondary
+                font__wight--medium
+                font__size--b2
+                ">
+                {{footer}}
+            </p>
+        </div>
+    </div>
+
+</div>

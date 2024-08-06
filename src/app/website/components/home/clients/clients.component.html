@@ -1,0 +1,8 @@
+<div class="block">
+    <div class="container">
+        @for ( client of clients(); track $index) {
+            <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/logos/clients/logo-'+client.url+'.svg'" alt="logo">
+        }
+    </div>
+</div>
+

@@ -1,0 +1,87 @@
+.container {
+    .icon-hamburger {
+        position: relative;
+        height: 1.9rem;
+        width: 2.5rem;
+        z-index: 99;
+        cursor: pointer;
+        
+        .line {
+            position: absolute;
+            height: .1875rem;
+            width: 2.5rem;
+            border-radius: .1875rem;
+            background-color: var(--fd-color-bg-quaternary);
+            transition: all 0.3s ease;
+        }
+        .line-1 {
+            top: 0;
+            right: 0;
+        }
+        .line-2 {
+            top: calc((1.9rem - 0.0625rem) / 2);
+            right: 0;
+        }
+        .line-3 {
+            bottom: 0;
+            right: 0;
+        }
+        .rotate-top {
+            transform: rotate(45deg);
+            top: calc((1.9rem - 0.1875rem) / 2);
+            background-color: var(--fd-color-bg-primary);
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+
+        .rotate-bottom {
+            transform: rotate(-45deg);
+            bottom: calc((1.9rem - 0.1875rem) / 2);
+            background-color: var(--fd-color-bg-primary);
+        }
+        
+    }
+    .sidebar {
+        position: fixed;
+        background-color: var(--fd-color-bg-tertiary);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 20.7rem;
+        padding: var(--spacing-sm) var(--spacing-md);
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        transition: right .4s ease-in-out;
+        ul {
+            .padding-bottom {
+                padding-bottom: var(--spacing-sm);
+            }
+
+            display: flex;
+            flex-direction: column;
+            li {
+                a {
+                    display: flex;
+                    padding: var(--spacing-xs) var(--spacing-sm);
+                    border-radius: var(--radius-minimal);
+                }
+                .active--route {
+                    background-color: var(--fd-color-bg-quaternary);
+                }
+            } 
+        }
+        .position-bottom {
+            position: absolute;
+            bottom: 10px;
+        }
+    }
+    .collapse {
+        transition: right .4s ease-in-out;
+        right: calc(-100% - var(--spacing-md));
+    }
+
+}

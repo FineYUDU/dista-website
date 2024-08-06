@@ -1,0 +1,90 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr) 1.5fr;
+    grid-template-rows: repeat(2,1fr);
+    gap: var(--spacing-sm);
+
+    .card {
+        display: grid;
+        position: relative;
+        grid-template-rows: 12.5rem auto;
+        background-color: var(--fd-color-bg-secondary);
+        padding: var(--spacing-sm);
+        border-radius: var(--radius-minimal);
+        gap: var(--spacing-xs);
+        cursor: pointer;
+        overflow: hidden;
+
+        p:last-child {
+            font-size: var(--font__size--b1);
+            color: var(--fd-color-brand-tertiary);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .item-3 {
+
+        background: var(--fd-color-brand-secondary);
+        grid-row: span 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        p:last-child {
+            font-size: var(--font__size--h5);
+            color: var(--fd-color-tertiary);
+        }
+
+    }
+}
+
+/* ? Breakpoint SM */
+@media screen and (max-width:460px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(8,1fr);
+        .card {
+            grid-template-rows: auto auto;
+        }
+        .item-3 {
+            grid-row: 2;
+            grid-column: 1/2;
+
+            p:last-child {
+                font-size: var(--font__size--b1);
+            }
+        }
+    }
+}
+
+/* ? Breakpoint MD */
+@media screen and (min-width:461px) and (max-width:1024px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3,1fr);
+        .card {
+            grid-template-rows: auto auto;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .item-3 {
+            grid-row: 1/4;
+            grid-column: 3/4;
+
+            p:last-child {
+                font-size: var(--font__size--b1);
+            }
+        }
+    }
+    
+}

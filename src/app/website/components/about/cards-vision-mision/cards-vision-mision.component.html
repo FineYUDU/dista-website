@@ -1,0 +1,18 @@
+<div class="container">
+    @for (card of cards(); track $index) {
+        <div class="card">
+            <p class="
+                font__size--h6
+                font__weight--semibold
+                ">
+                {{ card.title| translate:translateService.GetLang }}
+            </p>
+            <p>
+                {{ card.description | translate:translateService.GetLang }}
+            </p>
+
+        </div>
+
+    }
+
+</div>

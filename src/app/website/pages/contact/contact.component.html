@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="block block__main">
+        <div class="block__left">
+            <div class="header">
+                <p class="
+                    font__size--h4
+                    font__weight--semibold
+                    font__color--quaternary
+                    ">
+    
+                    {{ 'contact.title' | translate:translateService.GetLang }}
+                </p>
+                <p class="
+                    font__size--b2
+                    font__weight--medium
+                    font__color--quaternary
+                    ">
+                    {{ 'contact.description' | translate:translateService.GetLang }}
+    
+                </p>
+            </div>
+            
+            <div class="body">
+                @for (item of contactMenu(); track $index) {
+                    <div class="body__block">
+                        <p class="
+                            font__size--h6
+                            font__weight--semibold
+                            font__color--quaternary
+                            ">
+                            {{ item.title| translate:translateService.GetLang }}
+                
+                        </p>
+            
+                        <p class="
+                            font__size--b2
+                            font__weight--medium
+                            font__color--quaternary
+                            ">
+                            {{item.txt}}
+                        </p>
+            
+                        <p class="
+                            font__size--b2
+                            font__weight--medium
+                            font__color--quaternary
+                            ">
+                            {{item.txt2}}
+                        </p>
+        
+                    </div>
+
+                }
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+</div>

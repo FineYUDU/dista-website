@@ -1,0 +1,86 @@
+<div class="container">
+    <div class="service">
+        <div class="service__container">
+            <div class="block__body--left">
+                @if (service?.promotion) {
+                    <p class="
+                        font__size--b2
+                        font__color--tertiary
+                        font__weight--medium
+                        promotion
+                        "
+                        [ngClass]="{
+                            'best-seller': service?.promotion === 'services.promo.best-seller',
+                            'new': service?.promotion === 'services.promo.new',
+                            'sale': service?.promotion === 'services.promo.sale'
+                        }">
+                        {{ service?.promotion | translate:translateService.GetLang }}
+                    </p>
+                }
+
+                <img 
+                    [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/'+service?.img+'.webp'" 
+                    [alt]="service?.img"
+                >
+            </div>
+            <div class="block__body--right">
+                <div class="body">
+                    <p class="
+                        font__size--h6
+                        font__color--primary
+                        font__weight--semibold
+                        ">
+                        {{ service?.title | translate:translateService.GetLang }}
+                    </p>
+                    <p class="
+                        font__size--b2
+                        font__color--quaternary
+                        font__weight--medium
+                        ">
+                        {{ service?.description | translate:translateService.GetLang }}
+                    </p>
+                </div>
+                <div class="footer">
+                    @if (translateService.GetLang === 'es') {
+                        <a  class="btn btn--primary"
+                            target="_blank"
+                            [href]="
+                                'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+                                'Quisiera informacion sobre un servicio'">                
+                            {{ 'button.info' | translate:translateService.GetLang }}
+                        </a>
+                    } @else {
+                        <a  class="btn btn--primary"
+                            target="_blank"
+                            [href]="
+                                'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+                                'I would like information about a service'">                
+                            {{ 'button.info' | translate:translateService.GetLang }}
+                        </a>
+                    }
+                    <a class="btn btn--outline__primary" routerLink="../services">
+                        {{ 'button.back' | translate:translateService.GetLang }}
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <p class="
+        font__size--h5
+        font__weight--bold
+        font__color--quaternary
+        title--other-services
+        ">
+        {{ 'other-services.title' | translate:translateService.GetLang }}
+    </p>
+
+    <div class="other-services">
+        <card-other-services (click)="this.scrollTopService.scrollToTop()" />
+    </div>
+
+</div>

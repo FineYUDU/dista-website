@@ -1,0 +1,51 @@
+    <div class="block block__services--body">
+        <div class="services__block--left">
+            <div class="txt__container">
+                <p class="
+                    font__size--h5
+                    font__weight--bold
+                    font__color--tertiary
+                    ">
+                    {{ 'home.services.title' | translate:translateService.GetLang }}
+                </p>
+                <p class="
+                        font__size--b2
+                        font__weight--medium
+                        font__color--tertiary
+                    ">
+                    {{ 'home.services.description' | translate:translateService.GetLang }}
+                </p>
+
+            </div>
+
+            <div class="img__container">
+                <img src="../../../../../assets/theme/light/img/img-contract.svg" alt="contract" width="150">
+
+            </div>
+
+        </div>
+
+        <div class="services__block--right">
+            <p class="
+                font__size--h6
+                font__weight--semibold
+                font__color--primary
+                ">
+                {{ 'home.services.list-title' | translate:translateService.GetLang }}
+            </p>
+            <ul>
+                @for (item of activities(); track $index) {
+                    <li>
+                        {{ item.txt | translate:translateService.GetLang }}
+                    </li>
+                }
+            </ul>
+            <div class="btns__container">
+                <a class="btn" routerLink="/services" (click)="scrollTopService.scrollToTop()">
+                    {{ 'button.services' | translate:translateService.GetLang }}
+                </a>
+            </div>
+
+        </div>
+
+    </div>

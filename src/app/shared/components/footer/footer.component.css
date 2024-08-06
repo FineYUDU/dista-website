@@ -1,0 +1,125 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-sm) 0;
+    background-color: var(--fd-color-bg-tertiary);
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        width: var(--website--width);
+        max-width: var(--website--max-width);
+
+        .body--grid {
+            display: grid;
+            gap: var(--spacing-md);
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto auto;
+
+            .title__align-end {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            .social-media {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-xs);
+
+                .icons {
+                    display: flex;
+                    
+                    .icon--container {
+                        cursor: pointer;
+                        padding: .6rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--fd-color-bg-quaternary);
+                        border-radius: var(--radius-full);
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                gap: var(--spacing-xs);
+    
+                .active--route {
+                    font-weight: 600;
+                    color: var(--fd-color-tertiary);
+                }
+            }
+        }
+    }
+    
+    .hr {
+        height: .01rem;
+        width: 100%;
+        background-color: var(--fd-color-quaternary);
+    }
+}
+
+/* ? Breakpoint MD */
+@media screen and (max-width:1024px) {
+    .container {
+        .body {
+            .body--grid {
+                 display: grid;
+                 gap: var(--spacing-sm);
+                 grid-template-columns: 1fr;
+                 grid-template-rows: repeat(6,auto);
+                 justify-items: center;
+                 text-align: center;
+                 .title__align-end {
+                     display: flex;
+                     align-items: center;
+                 }
+                 .social-media {
+                     display: flex;
+                     flex-direction: column;
+                     align-items: center;
+                     gap: var(--spacing-xs);
+         
+                     .icons {
+                         display: flex;
+                         
+                         .icon--container {
+                             cursor: pointer;
+                             padding: .6rem;
+                             display: flex;
+                             justify-content: center;
+                             align-items: center;
+                             background-color: var(--fd-color-bg-quaternary);
+                             border-radius: var(--radius-full);
+                         }
+                     }
+                 }
+                 ul {
+                     display: flex;
+                     list-style: none;
+                     flex-direction: column;
+                     gap: var(--spacing-xs);
+         
+                     .active--route {
+                         font-weight: 600;
+                         color: var(--fd-color-tertiary);
+                     }
+                 }
+                 .item-contact-title { order: 1;}
+                 .item-contact { order: 2; padding-bottom: var(--spacing-md);}
+                 .item-menu-title { order: 3;}
+                 .item-menu { order: 4; padding-bottom: var(--spacing-md);}
+                 .item-logo { order: 5;}
+                 .item-social-media { order: 6; padding-bottom: var(--spacing-md);}
+             }
+        }
+    }
+    .container--footer {
+        text-align: center;
+    }
+}

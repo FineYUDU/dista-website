@@ -1,0 +1,100 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    .card--grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: var(--spacing-sm);
+        grid-template-rows: repeat(2,1fr);
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--fd-color-bg-secondary);
+            border-radius: var(--radius-minimal);
+            gap: var(--spacing-md);
+            padding: var(--spacing-sm);
+    
+            img {
+                width: 100%;
+                height: fit-content;
+            }
+
+            .card__body {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-sm);
+
+                .txt__container {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-xs);
+                }
+
+
+            }
+
+            .buttons__container {
+                display: flex;
+                gap: var(--spacing-sm);
+                box-sizing: border-box;
+                
+                a {
+                    box-sizing: border-box;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* ? Breakpoint MD */
+@media screen and (min-width:461px) and (max-width:1024px) {
+    .container {
+        .card--grid {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3,1fr);
+
+            .card {
+
+                .card__body {
+
+                    .txt__container {
+                        max-height: 100px;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+/* ? Breakpoint SM */
+@media screen and (max-width:460px) {
+    .container {
+        .card--grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(8,1fr);
+
+            .card {
+
+                .card__body {
+
+                    .txt__container {
+                        p:first-child {
+                            font-size: var(--font__size--h6);
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

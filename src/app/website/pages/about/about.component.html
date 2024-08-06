@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="block block__main">
+
+        <div class="block__left">
+            <img 
+            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/image_edited.webp'" 
+            class="img"
+            alt="clean tools">
+
+            <div class="block__right--bg"></div>
+
+        </div>
+
+        <div class="block__right">
+            <div class="block--header">
+                <p class="
+                        font__size--h4
+                        font__weight--semibold
+                        font__color--quaternary
+                    ">
+            
+                    {{ 'about.title' | translate:translateService.GetLang }}
+                </p>
+                <p class="
+                        font__size--b2
+                        font__weight--medium
+                        font__color--quaternary
+                    ">
+                    {{ 'about.description' | translate:translateService.GetLang }}
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block__vision-mision">
+        <cards-vision-mision/>
+    </div>
+</div>

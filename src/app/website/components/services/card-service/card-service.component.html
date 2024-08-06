@@ -1,0 +1,63 @@
+<div class="container">
+    <p class="
+        font__size--h5
+        font__weight--bold
+        font__color--quaternary
+    ">
+        {{ 'services.title' | translate:translateService.GetLang }}
+    </p>
+    <div class="card--grid">
+        @for (service of servicesPageService.services(); track $index) {
+            <div class="card">
+                @if (service.promotion) {
+                    <p class="
+                        font__size--b2
+                        font__color--tertiary
+                        font__weight--medium
+                        promotion"
+                        [ngClass]="{
+                            'best-seller': service?.promotion === 'services.promo.best-seller',
+                            'new': service?.promotion === 'services.promo.new',
+                            'sale': service?.promotion === 'services.promo.sale'
+                        }">
+                        {{ service.promotion | translate:translateService.GetLang }}
+                    </p>
+                }
+                <div class="card__body">
+                    <img [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/'+service.img+'.webp'" alt="">
+                    
+                    <div class="txt__container">
+                        <p class="
+                            font__size--b1
+                            font__color--primary
+                            font__weight--medium
+                            ">
+                            {{ service.title | translate:translateService.GetLang }}
+                        </p>
+    
+                        <p class="
+                            font__size--b2
+                            font__color--quaternary
+                            font__weight--regular
+                            ">
+                            {{ service.description | translate:translateService.GetLang }}
+                        </p>
+
+                    </div>
+
+                    
+                </div>
+
+                <div class="buttons__container">
+                    <a class="btn btn--primary" [routerLink]="service.router" (click)="scrollTopService.scrollToTop()">
+                        {{ 'button.about-service' | translate:translateService.GetLang }}
+                    </a>
+
+                </div>
+                
+            </div>
+        }
+
+    </div>
+
+</div>

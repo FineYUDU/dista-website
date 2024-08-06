@@ -1,0 +1,40 @@
+<div class="block hero">
+    <div class="block__left">
+    
+        <div class="block--header">
+            <p class="
+                    font__size--h4
+                    font__weight--semibold
+                    font__color--tertiary
+                ">
+    
+                {{ 'home.title' | translate:translateService.GetLang }}
+            </p>
+            <p class="
+                    font__size--b2
+                    font__weight--medium
+                    font__color--tertiary
+                ">
+                {{ 'home.description' | translate:translateService.GetLang }}
+            </p>
+        </div>
+    
+        <div class="btns--container">
+            <a class="btn" routerLink="../contact">
+                {{ 'button.contact' | translate:translateService.GetLang }}
+            </a>
+            
+        </div>
+    
+    </div>
+    
+    <div class="block block__right">
+        <img
+            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/image_edited.webp'"
+            class="img"
+            alt="clean tools">
+    
+    </div>
+    
+    <div class="block__bg"></div>
+</div>

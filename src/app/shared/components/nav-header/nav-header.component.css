@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    justify-content: center;
+    height: var(--size-nav-header);
+    background-color: var(--fd-color-bg-primary);
+    transition: opacity .4s ease-in-out;
+
+    .container--body {
+        width: var(--website--width);
+        max-width: var(--website--max-width);
+        display: grid;
+        grid-template-columns: 7.8125rem auto;
+        align-items: center;
+
+        img {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: var(--spacing-sm);
+
+            a:hover {
+                color:var(--fd-color-secondary);
+            }
+
+            a:active {
+                color:var(--fd-color-quintary);
+            }
+
+            .active--route {
+                font-weight: 600;
+                color: var(--fd-color-quintary);
+            }
+        }
+    }
+}
+
+/* ? Breakpoint LG */
+@media screen and (min-width:1025px) {
+    .nav-movile {
+        display: none;
+    }
+}
+/* ? Breakpoint MD */
+@media screen and (max-width:1024px) {
+    .container {
+        .container--body {
+            justify-content: space-between;
+            ul {
+                display: none;
+            }
+        }
+    }
+}
+.hide-menu {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease-in-out;
+    
+}

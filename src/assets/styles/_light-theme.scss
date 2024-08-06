@@ -1,0 +1,90 @@
+@import './variables-primitives';
+
+.theme--light {
+    // * ---------------------------------- Primary ------------------------------------------
+    --fd-color-primary                                                              :#{$grey-600};
+    --fd-color-secondary                                                            :#{$grey-200};
+    --fd-color-tertiary                                                             :#{$grey-50};
+    --fd-color-quaternary                                                           :#{$grey-500};
+    --fd-color-quintary                                                             :#{$grey-700};
+
+    // * ---------------------------------- Background ------------------------------------------
+    --fd-color-bg-primary                                                          :#{$grey-0};
+    --fd-color-bg-secondary                                                        :#{$grey-50};
+    --fd-color-bg-tertiary                                                         :#{$grey-700};
+    --fd-color-bg-quaternary                                                       :#{$grey-600};
+
+    // * ---------------------------------- Brand ------------------------------------------------
+    --fd-color-brand-primary                                                       :#{$brand-50};
+    --fd-color-brand-secondary                                                     :#{$brand-100};
+    --fd-color-brand-tertiary                                                      :#{$brand-200};
+    --fd-color-brand-quaternary                                                    :#{$brand-300};
+
+    // * ---------------------------------- Lang ------------------------------------------------
+    --fd-color-lang-primary                                                         :#{$grey-200};
+    --fd-color-lang-secondary                                                       :#{$grey-600};
+    --fd-color-lang-tertiary                                                        :#{$grey-400};
+     //  
+    // ?                                    Buttons Default
+    //  
+    // * ---------------------------------- Button / Default -------------------------------------
+    --fd-btn-bg-color                                                               :#{$brand-300};
+    --fd-btn-color                                                                  :#{$grey-50};
+
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-btn-hover-bg-color                                                         :#{$brand-200};
+    --fd-btn-hover-color                                                            :#{$grey-100};
+
+    // * ---------------------------------- Active -----------------------------------------------
+    --fd-btn-active-bg-color                                                        :#{$brand-500};
+    --fd-btn-active-color                                                           :#{$grey-0};
+
+    // * ---------------------------------- Focus -----------------------------------------------
+    --fd-btn-focus-outline                                                          :#{$grey-200};
+
+    //
+    // * ---------------------------------- Button / Outline Primary ----------------------------
+    //
+    --fd-btn-outline-primary-bg-color                                               :transparent;
+    --fd-btn-outline-primary-txt-color                                              :#{$grey-500};
+    --fd-btn-outline-primary-outline-color                                          :#{$grey-100};
+
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-btn-outline-primary-hover-bg-color                                         :transparent;
+    --fd-btn-outline-primary-hover-txt-color                                        :#{$grey-200};
+    --fd-btn-outline-primary-hover-outline-color                                    :#{$grey-200};
+
+    // * ---------------------------------- Active -----------------------------------------------
+    --fd-btn-outline-primary-active-bg-color                                        :#{$grey-200};
+    --fd-btn-outline-primary-active-txt-color                                       :#{$grey-0};
+    --fd-btn-outline-primary-active-outline-color                                   :transparent;
+    
+    // * ---------------------------------- Focus ------------------------------------------------
+    --fd-btn-outline-primary-focus-outline                                          :#{$grey-200};
+    //
+    //
+    // * ---------------------------------- Button / Outline Secondary --------------------------
+    //
+    --fd-btn-outline-secondary-bg-color                                             :transparent;
+    --fd-btn-outline-secondary-txt-color                                            :#{$grey-50};
+    --fd-btn-outline-secondary-outline-color                                        :#{$grey-100};
+
+    // * ---------------------------------- Hover ------------------------------------------------
+    --fd-btn-outline-secondary-hover-bg-color                                       :transparent;
+    --fd-btn-outline-secondary-hover-txt-color                                      :#{$grey-200};
+    --fd-btn-outline-secondary-hover-outline-color                                  :#{$grey-200};
+
+    // * ---------------------------------- Active -----------------------------------------------
+    --fd-btn-outline-secondary-active-bg-color                                      :#{$grey-200};
+    --fd-btn-outline-secondary-active-txt-color                                     :#{$grey-0};
+    --fd-btn-outline-secondary-active-outline-color                                 :transparent;
+    
+    // * ---------------------------------- Focus ------------------------------------------------
+    --fd-btn-outline-secondary-focus-outline                                        :#{$grey-200};
+    //
+    // * ---------------------------------- Helpers ----------------------------------------------
+    //
+    --fd-color-success                                                              :#{$success-600};
+    --fd-color-warning                                                              :#{$warning-600};
+    --fd-color-danger                                                               :#{$danger-600};
+}
