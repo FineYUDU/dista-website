@@ -42,21 +42,19 @@ export default class WebsiteComponent {
   constructor() {
 
     const calcularPorcentajeScroll = ( event:any ) => {
-      const {scrollTop,scrollHeight,clientHeight} = event.target.documentElement;
+      const { scrollTop } = event.target.documentElement;
 
-      // console.log( 'scrollTop',scrollTop);
-      // console.log( 'scrollHeight',scrollHeight);
-      // console.log( 'clientHeight',clientHeight);
+      // console.log( 'scrollTop websiteComponent',scrollTop);
 
-      return ( scrollTop / ( scrollHeight - clientHeight )*100 );
+      return scrollTop;
     }
     const scroll$ = fromEvent(document,'scroll');
-    const opacityNavbar$ = scroll$.pipe(
+    const hideNavbar$ = scroll$.pipe(
       map(  calcularPorcentajeScroll ),
     )
-    opacityNavbar$.subscribe(
+    hideNavbar$.subscribe(
       scroll => {
-        if (scroll < 40 ) {
+        if (scroll < 200 ) {
           this.hideMenu = false  
         }
         else {

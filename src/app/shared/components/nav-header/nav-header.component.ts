@@ -42,17 +42,19 @@ export class NavHeaderComponent {
   constructor() {
 
     const calcularPorcentajeScroll = ( event:any ) => {
-      const {scrollTop,scrollHeight,clientHeight} = event.target.documentElement;
+      const { scrollTop } = event.target.documentElement;
 
-      return ( scrollTop / ( scrollHeight - clientHeight )*100 );
+      // console.log( 'scrollTop navbarComponent',scrollTop);
+
+      return scrollTop;
     }
     const scroll$ = fromEvent(document,'scroll');
-    const opacityNavbar$ = scroll$.pipe(
+    const hideNavbar$ = scroll$.pipe(
       map(  calcularPorcentajeScroll ),
     )
-    opacityNavbar$.subscribe(
+    hideNavbar$.subscribe(
       scroll => {
-        if (scroll < 40 ) {
+        if (scroll < 200 ) {
           this.hideMenu = false  
         }
         else {
@@ -61,4 +63,5 @@ export class NavHeaderComponent {
       }
     )
   }
+
 }
