@@ -2,26 +2,59 @@
     <div class="service">
         <div class="service__container">
             <div class="block__body--left">
-                @if (service?.promotion) {
-                    <p class="
-                        font__size--b2
-                        font__color--tertiary
-                        font__weight--medium
-                        promotion
-                        "
-                        [ngClass]="{
-                            'best-seller': service?.promotion === 'services.promo.best-seller',
-                            'new': service?.promotion === 'services.promo.new',
-                            'sale': service?.promotion === 'services.promo.sale'
-                        }">
-                        {{ service?.promotion | translate:translateService.GetLang }}
-                    </p>
-                }
 
-                <img 
-                    [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/'+service?.img+'.webp'" 
-                    [alt]="service?.img"
-                >
+                <div class="images__container">
+                    <div class="carrousel">
+                        @for (img of imagesCarrouse; track $index; let i = $index) {
+                            <div class="img__container" 
+                                (click)="changeImgCarrousel(i)"
+                                [ngClass]="{'img--selected': i === indexImg}"
+                                >
+                                <img 
+                                    [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/services/img-' + img + '.png'" 
+                                    [alt]="service?.carrousel"
+                                >
+    
+                            </div>
+                        }
+                        
+                    </div>
+
+                    <div class="img__container main__img">
+                        @if (service?.promotion) {
+                            <p class="
+                                font__size--b2
+                                font__color--tertiary
+                                font__weight--medium
+                                promotion
+                                "
+                                [ngClass]="{
+                                    'best-seller': service?.promotion === 'services.promo.best-seller',
+                                    'new': service?.promotion === 'services.promo.new',
+                                    'sale': service?.promotion === 'services.promo.sale'
+                                }">
+                                {{ service?.promotion | translate:translateService.GetLang }}
+                            </p>
+                        }
+                        @for (img of imagesCarrouse; track $index; let i = $index) {
+                            <div class="img__container" 
+                                (click)="changeImgCarrousel(i)"
+                                [ngClass]="{
+                                    'img--show': i === indexImg,
+                                    'img--hide': i !== indexImg,
+                                    }"
+                                >
+                                <img 
+                                    [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/services/img-' + img + '.png'" 
+                                    [alt]="service?.carrousel"
+                                >
+    
+                            </div>
+                        }
+
+                    </div>
+
+                </div>
             </div>
             <div class="block__body--right">
                 <div class="body">
@@ -42,25 +75,26 @@
                 </div>
                 <div class="footer">
                     @if (translateService.GetLang === 'es') {
-                        <a  class="btn btn--primary"
+                        <a  class="btn btn--whatsapp"
                             target="_blank"
-                            [href]="
-                                'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
-                                'Quisiera informacion sobre un servicio'">                
+                            [href]="'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+                                'Quisiera informacion sobre un servicio'"
+                            >                
+                            <img src="../../../../assets/theme/light/icon/icon-whatsapp.svg" alt="WhatsApp">
                             {{ 'button.info' | translate:translateService.GetLang }}
+
+
                         </a>
                     } @else {
-                        <a  class="btn btn--primary"
+                        <a  class="btn btn--whatsapp"
                             target="_blank"
-                            [href]="
-                                'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
-                                'I would like information about a service'">                
+                            [href]="'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
+                                'I would like information about a service'"
+                            >                
+                            <img src="../../../../assets/theme/light/icon/icon-whatsapp.svg" alt="WhatsApp">
                             {{ 'button.info' | translate:translateService.GetLang }}
                         </a>
                     }
-                    <a class="btn btn--outline__primary" routerLink="../services">
-                        {{ 'button.back' | translate:translateService.GetLang }}
-                    </a>
 
                 </div>
 
@@ -79,8 +113,8 @@
         {{ 'other-services.title' | translate:translateService.GetLang }}
     </p>
 
-    <div class="other-services">
-        <card-other-services (click)="this.scrollTopService.scrollToTop()" />
+    <div class="other-services" (click)="resetIndexImg()">
+        <card-other-services (click)="this.scrollTopService.scrollToTop()"/>
     </div>
 
 </div>

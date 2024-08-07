@@ -166,23 +166,28 @@
         cursor: pointer;
         font-weight: 500;
         border:none;
-        background-color: var(--fd-btn-bg-color);
-        color: var(--fd-btn-color);
+        // -------- Button Primary
+        &.btn--primary {
+            background-color: var(--fd-btn-bg-color);
+            color: var(--fd-btn-color);
+            &:hover {
+                background-color: var(--fd-btn-hover-bg-color);
+                color: var(--fd-btn-hover-color);
+            }
+            &:active {
+                background-color: var(--fd-btn-active-bg-color);
+                color: var(--fd-btn-active-color);
+            }
+            &:focus-visible {
+                outline:var(--border-lg) solid var(--fd-btn-focus-outline);
+            }
+        }
+
         & img {
-            width: .825rem;
-            height: .825rem;
+            width: 1.375rem;
+            height: 1.375rem;
         }
-        &:hover {
-            background-color: var(--fd-btn-hover-bg-color);
-            color: var(--fd-btn-hover-color);
-        }
-        &:active {
-            background-color: var(--fd-btn-active-bg-color);
-            color: var(--fd-btn-active-color);
-        }
-        &:focus-visible {
-            outline:var(--border-lg) solid var(--fd-btn-focus-outline);
-        }
+        // -------- Button Outline Primary
         &.btn--outline__primary {
             background-color: var(--fd-btn-outline-primary-bg-color);
             color: var(--fd-btn-outline-primary-txt-color);    
@@ -201,6 +206,8 @@
                 outline:var(--border-lg) solid var(--fd-btn-outline-primary-focus-outline);
             }
         }
+
+        // -------- Button Outline Secondary
         &.btn--outline__secondary {
             background-color: var(--fd-btn-outline-secondary-bg-color);
             color: var(--fd-btn-outline-secondary-txt-color);    
@@ -219,6 +226,8 @@
                 outline:var(--border-lg) solid var(--fd-btn-outline-secondary-focus-outline);
             }
         }
+
+        // -------- Button Success
         &.btn--success {
             background-color: var(--fd-btn-success-bg-color);
             color: var(--fd-btn-success-txt-color);    
@@ -237,8 +246,25 @@
                 outline:var(--border-lg) solid var(--fd-btn-success-focus-outline);
             }
         }
+
+        // -------- Button WhatsApp
+        &.btn--whatsapp {
+            background-color: #25D366;
+            color: var(--fd-btn-color);
+            &:hover {
+                background-color: #40e07b;
+                color: var(--fd-btn-color);
+            }
+            &:active {
+                background-color: #1ea851;
+                color: var(--fd-btn-color);
+            }
+            &:focus-visible {
+                outline:var(--border-lg) solid #1ea851;
+            }
+        }
     }
-    .btn--whatsapp {
+    .btn--whatsapp-float {
         position: fixed;
         bottom: 2rem;
         right: 2rem;

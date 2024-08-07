@@ -15,23 +15,13 @@
         gap: var(--spacing-md);
         
         .block__left {
-            position: relative;
             z-index: -1;
-    
-            .block__right--bg {
-                position: absolute;
-                bottom: 120px;
-                right: 0;
-                background-color: var(--fd-color-bg-secondary);
-                border-radius: var(--radius-rounded);
-                width: 100%;
-                height: 80%;
-                z-index: -1;
-            }
-            
+
             img {
+                width: 100%;
                 height: auto;
-                width: fit-content;
+                overflow: hidden;
+                border-radius: var(--radius-rounded);
             }
     
         }
@@ -61,21 +51,7 @@
 
             .block__left {
                 order: 2;
-                width: 100%;
-        
-                .block__right--bg {
-    
-                    top: 0;
-                    right:0;
-                    bottom: 0;
-                    width: 100%;
-                    height: 75%;
-    
-                }
-                img {
-                    width: 100%;
-                }
-    
+                width: 100%;        
             }
     
             .block__right {
@@ -107,20 +83,7 @@
             gap: var(--spacing-lg);
             
             .block__left  {
-                order: 2;
-    
-                .block__right--bg {
-    
-                    top: 1.6rem;
-                    bottom: 0;
-                    width: 100%;
-                    height: 75%;
-    
-                }
-                img {
-                    width: 100%;
-                }
-    
+                order: 2;  
             }
     
             .block__right  {

@@ -14,22 +14,57 @@
             gap: var(--spacing-md);
             
             .block__body--left {
-                overflow: hidden;
                 position: relative;
-                width: 25rem;
-                height: 25rem;
-                background-color: var(--fd-color-bg-secondary);
-                border-radius: var(--radius-minimal);
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: var(--spacing-xs);
-                box-sizing: border-box;
-                
-                img {
-                    width: 100%;
-                    height: auto;
+
+                .images__container {
+                    display: grid;
+                    grid-template-columns: auto max-content;
+                    column-gap: var(--spacing-xs);
+
+                    .carrousel {
+                        display: grid;
+                        grid-template-columns: 3.125rem;
+                        grid-template-rows: repeat(3,3.125rem);
+                        gap: var(--spacing-xs);
+
+                        .img__container {
+                            cursor: pointer;
+                        }
+
+                        .img--selected {
+                            border: .125rem solid var(--fd-color-brand-secondary);
+                        }
+                    }
+
+                    .img__container {
+                        overflow: hidden;
+                        border-radius: var(--radius-minimal);
+                    }
+
+                    .main__img {
+                        position: relative;
+                        max-height: 21.25rem;
+
+                        .img--show {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .img--hide {
+                            display: none;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
                 }
+                
             }
 
 
@@ -78,9 +113,20 @@
 
                 .block__body--left {
                     width: 100%;
+
+                    .images__container {
+                        grid-template-columns: 1fr;
+                        row-gap: var(--spacing-sm);
+
+                        .carrousel {
+                            grid-template-rows: 3.125rem;
+                            grid-template-columns: repeat(3, 3.125rem);
+                        }
+                    }
+                    
                     img {
-                        width: 100%;
-                        height: auto;
+                        height: 100%;
+                        width: auto;
                     }
                 }
 
@@ -104,7 +150,11 @@
     .container {
         .service {
             .service__container {
+                display: flex;
+                flex-direction: column;
+                
                 .block__body--right {
+
                     .footer {
                         flex-direction: column;
                         a {

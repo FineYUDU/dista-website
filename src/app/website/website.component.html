@@ -11,7 +11,7 @@
 </main>
 
 @if (translateService.GetLang === 'es') {
-    <a  class="btn--whatsapp" 
+    <a  class="btn--whatsapp-float" 
         target="_blank"
         [href]="
             'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+
@@ -24,7 +24,7 @@
         >
     </a>
 } @else {
-    <a  class="btn--whatsapp" 
+    <a  class="btn--whatsapp-float" 
         target="_blank"
         [href]="
             'https://api.whatsapp.com/send?phone='+whatsapp+'&text='+

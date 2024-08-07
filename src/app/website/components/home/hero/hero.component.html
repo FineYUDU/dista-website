@@ -20,7 +20,7 @@
         </div>
     
         <div class="btns--container">
-            <a class="btn" routerLink="../contact">
+            <a class="btn btn--primary" routerLink="../contact">
                 {{ 'button.contact' | translate:translateService.GetLang }}
             </a>
             
@@ -30,7 +30,7 @@
     
     <div class="block block__right">
         <img
-            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/image_edited.webp'"
+            [src]="'../../../../assets/theme/'+localStorageService.GetMode+'/img/hero.png'"
             class="img"
             alt="clean tools">
     

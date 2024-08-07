@@ -39,8 +39,19 @@ export default class ServicePageComponent implements OnInit {
   public whatsapp:string = enviroment.whatsapp;
 
   service?:Services;
+  imagesCarrouse?:string[];
+  indexImg:number = 0;
+
+  changeImgCarrousel(selected:number){
+    this.indexImg = selected;
+  }
+
+  resetIndexImg(){
+    this.indexImg = 0;
+  }
 
   ngOnInit(): void {
+    
     this.activatedRoute.params
       .pipe(
         switchMap( ({id}) => this.servicesPageService.getServiceByID(id) ),
@@ -49,6 +60,7 @@ export default class ServicePageComponent implements OnInit {
 
         if (!service ) return this.router.navigate(['/home']);
         this.service = service;
+        this.imagesCarrouse = service.carrousel;
 
         // console.log({service});
         return;
